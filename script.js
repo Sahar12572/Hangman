@@ -9,7 +9,7 @@ const wordList = [
   "kiwi",
 ];
 let word = getRandomWord();
-let displayWord = Array(word.length).fill("_");
+let displayWord = Array(word.length).fill("_ ");
 let wrongGuesses = [];
 let attemptsLeft = 6;
 
