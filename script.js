@@ -1,9 +1,25 @@
-const word = "honeydew"; // The word to guess
-let displayWord = Array(word.length).fill("_"); // Word display array
+const wordList = [
+  "honeydew",
+  "mango",
+  "pineapple",
+  "strawberry",
+  "apple",
+  "banana",
+  "grape",
+  "kiwi",
+];
+let word = getRandomWord();
+let displayWord = Array(word.length).fill("_");
 let wrongGuesses = [];
-let attemptsLeft = 4;
+let attemptsLeft = 6;
 
-// Function to update the word display and status
+// Pick a random word from the list
+function getRandomWord() {
+  const index = Math.floor(Math.random() * wordList.length);
+  return wordList[index];
+}
+
+// Update the word display and status
 function updateGameDisplay() {
   document.getElementById("word-display").textContent = displayWord.join(" ");
   document.getElementById("wrong-guesses").textContent =
@@ -11,11 +27,11 @@ function updateGameDisplay() {
   document.getElementById("attempts-left").textContent = attemptsLeft;
 }
 
-// Function to handle the guessing of a letter
+// Handle letter guessing
 function guessLetter() {
   const letterInput = document.getElementById("letter-input");
   const letter = letterInput.value.toLowerCase();
-  letterInput.value = ""; // Clear the input field
+  letterInput.value = "";
 
   if (
     letter &&
@@ -23,14 +39,12 @@ function guessLetter() {
     !displayWord.includes(letter)
   ) {
     if (word.includes(letter)) {
-      // Update displayWord if the guess is correct
       for (let i = 0; i < word.length; i++) {
         if (word[i] === letter) {
           displayWord[i] = letter;
         }
       }
     } else {
-      // If the guess is wrong
       wrongGuesses.push(letter);
       attemptsLeft--;
     }
@@ -47,12 +61,14 @@ function guessLetter() {
   }
 }
 
-// Function to reset the game
+// Reset the game with a new word
 function resetGame() {
+  word = getRandomWord();
   displayWord = Array(word.length).fill("_");
   wrongGuesses = [];
   attemptsLeft = 6;
   updateGameDisplay();
 }
-// Initialize the game display
+
+// Start the game
 updateGameDisplay();
