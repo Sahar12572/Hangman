@@ -6,7 +6,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #088d8d;
+    background-color: #00571a;
 }
 
 /* Game container takes up the full screen */
@@ -22,8 +22,8 @@ html, body {
 
 .game-box {
     padding: 20px;
-    border: 2px solid #0eb1a3;
-    background-color: #5ac9fc;
+    border: 2px solid #007745;
+    background-color: #5afc90;
     border-radius: 8px;
     width: 80%;
     max-width: 400px;
@@ -63,7 +63,7 @@ input[type="text"] {
 }
 
 h1 {
-    color: #00336d;
+    color: #08461c;
     text-align: center;
     font-size: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
