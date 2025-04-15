@@ -98,7 +98,7 @@ const importantWords = [
   "eggplant",
   "artichoke",
   "asparagus",
-  "cabbage"
+  "cabbage",
 ];
 let word = getRandomWord();
 let displayWord = Array(word.length).fill("_ ");
