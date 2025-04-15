@@ -15,8 +15,8 @@ let attemptsLeft = 6;
 
 // Pick a random word from the list
 function getRandomWord() {
-  const index = Math.floor(Math.random() * wordList.length);
-  return wordList[index];
+  const index = Math.floor(Math.random() * importantWords.length);
+  return importantWords[index];
 }
 
 // Update the word display and status
