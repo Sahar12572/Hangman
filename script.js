@@ -103,7 +103,7 @@ const importantWords = [
 let word = getRandomWord();
 let displayWord = Array(word.length).fill("_ ");
 let wrongGuesses = [];
-let attemptsLeft = 6;
+let attemptsLeft = 5;
 
 // Pick a random word from the list
 function getRandomWord() {
