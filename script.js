@@ -1,4 +1,4 @@
-const wordList = [
+const importantWords = [
   "honeydew",
   "mango",
   "pineapple",
