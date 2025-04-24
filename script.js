@@ -99,6 +99,12 @@ const importantWords = [
   "artichoke",
   "asparagus",
   "cabbage",
+  "biryani",
+  "Zaid",
+  "Nabeela",
+  "Fatima Zahra",
+  "mohamed",
+  "ayesha",
 ];
 let word = getRandomWord();
 let displayWord = Array(word.length).fill("_");
